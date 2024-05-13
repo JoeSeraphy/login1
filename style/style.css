@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Signika", sans-serif;
+}
+
+header {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex-container {
+  margin: 0 auto;
+  padding: 48px 100px;
+}
+
+.flex-container .flex-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-container .flex-nav .flex-list {
+  display: flex;
+  gap: 54px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.flex-container .flex-nav .flex-list li {
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  text-decoration: none;
+}
+.flex-container .flex-nav .flex-list li a {
+  text-decoration: none;
+  color: #4f555a;
+}
+
+.flex-container .flex-nav .flex-list li a:hover {
+  color: #4461f2;
+  content: "";
+
+  height: 2px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  margin-top: 100px;
+}
+
+.container .text {
+  display: grid;
+  gap: 75px;
+}
+
+.container .text .title {
+  font-size: 44px;
+  font-weight: 700;
+}
+.container .text .description {
+  font-size: 23px;
+  width: 300px;
+}
+
+.container .text .description a {
+  color: #4461f2;
+  text-decoration: none;
+}
+.avatar img {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 0 36px;
+}
+.form-container {
+  position: relative;
+  width: 100%;
+}
+.form-container .form-login .form {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 16px;
+}
+.form-container .form-register .form {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 16px;
+  display: none;
+}
+
+.form-container .form input {
+  width: 400px;
+  outline: none;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #eaf0f7;
+  font-size: 18px;
+}
+.form-container .form input::placeholder {
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  color: #4f555a/0.1;
+}
+
+.form-container .form input:focus {
+  border: 1px solid #4461f2;
+}
+
+.form-container .form .mail-icon,
+.form-container .form .eye-icon,
+.form-container .form .eyeon-icon,
+.form-container .form-register .form .person-icon {
+  color: #4461f2;
+  font-size: 22px;
+}
+
+.form-container .form-login .form .mail-icon {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  cursor: pointer;
+}
+.form-container .form-login .form .eye-icon {
+  position: absolute;
+  top: 86px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.form-container .form-login .form .eyeon-icon {
+  position: absolute;
+  top: 86px;
+  right: 10px;
+  display: none;
+}
+.form-container .form-register .form .person-icon {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+}
+.form-container .form-register .form .mail-icon {
+  position: absolute;
+  top: 86px;
+  right: 10px;
+}
+.form-container .form-register .form .eye-icon {
+  position: absolute;
+  top: 156px;
+  right: 10px;
+}
+.form-container .form-register .form .eyeon-icon {
+  position: absolute;
+  top: 156px;
+  right: 10px;
+  display: none;
+}
+
+.form-container .form-register .form .terms {
+  font-size: 12px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 400px;
+}
+
+.form-container .form-register .form .terms input {
+  margin-right: -180px;
+  margin-left: -190px;
+}
+
+.form-container .form span {
+  font-size: 14px;
+  font-size: 500;
+  color: #c7c7c7;
+  text-align: end;
+}
+
+.form-container .form .btn {
+  background-color: #4461f2;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 700;
+  border: none;
+  padding: 16px 0;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+.form-container .form .another-sing {
+  display: grid;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.form-container .form .another-sing .flex-line {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.form-container .form .another-sing .flex-line .line {
+  content: "";
+  width: 120px;
+  height: 1px;
+  background-color: #c7c7c7;
+  display: flex;
+}
+
+.form-container .form .another-sing .icon-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.form-container .form .another-sing .icon-flex .icon {
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+  transition: 0.2s ease-in;
+}
+.form-container .form .another-sing .icon-flex img {
+  padding: 16px 44px;
+}
+
+.form-container .form .another-sing .icon-flex .icon:hover {
+  scale: 1.1;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

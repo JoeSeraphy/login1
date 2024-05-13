@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>login</title>
+  </head>
+  <body>
+    <header>
+      <div class="flex-container">
+        <nav class="flex-nav">
+          <ul class="flex-list">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Paginas</a></li>
+            <li><a href="#">Contatos</a></li>
+          </ul>
+          <ul class="flex-list">
+            <li><a href="#">Entrar</a></li>
+            <li><a href="#">Registrar-se</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <div class="text">
+        <h2 class="title">Faça login para recarregar diretamente</h2>
+        <p class="description">
+          se você não tem uma conta, você pode se
+          <a href="#">registrar aqui!</a>
+        </p>
+      </div>
+      <div class="avatar"><img src="image/Picture.png" alt="picture" /></div>
+      <div class="form-container">
+        <div class="form-login">
+          <form action="" class="form">
+            <input type="text" placeholder="Email" /><ion-icon
+              name="mail"
+              class="mail-icon"
+            ></ion-icon>
+            <input type="password" placeholder="Senha" /><ion-icon
+              name="eye-off"
+              class="eye-icon"
+            ></ion-icon
+            ><ion-icon name="eye" class="eyeon-icon"></ion-icon>
+            <span>Esqueceu a senha?</span>
+            <button type="submit" class="btn">Entrar</button>
+            <div class="another-sing">
+              <div class="flex-line">
+                <div class="line"></div>
+                <span>ou continuar com</span>
+                <div class="line"></div>
+              </div>
+              <div class="icon-flex">
+                <div class="icon">
+                  <img src="image/google.svg" alt="google" />
+                </div>
+                <div class="icon">
+                  <img src="image/apple.svg" alt="apple" />
+                </div>
+                <div class="icon">
+                  <img src="image/facebook.svg" alt="facebook" />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form-register active">
+          <form action="" class="form">
+            <input type="text" placeholder="Nome de usuario" /><ion-icon
+              name="person"
+              class="person-icon"
+            ></ion-icon>
+            <input type="text" placeholder="Seu Email" /><ion-icon
+              name="mail"
+              class="mail-icon"
+            ></ion-icon>
+            <input type="password" placeholder="Crie uma enha" /><ion-icon
+              name="eye-off"
+              class="eye-icon"
+            ></ion-icon
+            ><ion-icon name="eye" class="eyeon-icon"></ion-icon>
+            <label class="terms"
+              ><input type="checkbox" />Eu concordo com os Termos e
+              Condições</label
+            >
+            <button type="submit" class="btn">Registrar</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>
