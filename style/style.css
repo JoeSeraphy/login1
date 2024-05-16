@@ -41,6 +41,7 @@ header {
   height: 3px;
   background: #4461f2;
   border-radius: 5px;
+  transform-origin: left;
   transform: scaleX(0);
   transition: transform 0.5s;
 }
@@ -59,6 +60,7 @@ header {
   align-items: center;
   padding: 0 100px;
   margin-top: 100px;
+  position: relative;
 }
 
 .container .text {
@@ -88,20 +90,27 @@ header {
 .form-container {
   position: relative;
   width: 100%;
+  height: 100%;
+  padding: 4px;
+  transition: 0.3s ease;
 }
-.form-container .form-login .form {
+.form-container .form form {
   display: grid;
   grid-template-columns: 1;
   gap: 16px;
 }
-.form-container .form-login.none {
+.form-container.active .form.login {
+  transition: 0.3s ease-in-out;
+  transform: translateX(-400px);
   display: none;
 }
+.form-container.active .form.register {
+  transition: 0.3s ease-in-out;
+  display: block;
+}
 
-.form-container .form-register .form {
-  display: grid;
-  grid-template-columns: 1;
-  gap: 16px;
+.form-container .form.register {
+  transition: 0.3s ease-in-out;
   display: none;
 }
 
@@ -128,53 +137,53 @@ header {
 .form-container .form .mail-icon,
 .form-container .form .eye-icon,
 .form-container .form .eyeon-icon,
-.form-container .form-register .form .person-icon {
+.form-container .form .person-icon {
   color: #4461f2;
   font-size: 22px;
 }
 
-.form-container .form-login .form .mail-icon {
+.form-container .form.login .mail-icon {
   position: absolute;
-  top: 16px;
+  top: 20px;
   right: 10px;
   cursor: pointer;
 }
-.form-container .form-login .form .eye-icon {
+.form-container .form.login .eye-icon {
   position: absolute;
-  top: 86px;
+  top: 90px;
   right: 10px;
   cursor: pointer;
 }
 
-.form-container .form-login .form .eyeon-icon {
+.form-container .form.login .eyeon-icon {
   position: absolute;
-  top: 86px;
+  top: 90px;
   right: 10px;
   display: none;
 }
-.form-container .form-register .form .person-icon {
+.form-container .form form .person-icon {
   position: absolute;
-  top: 16px;
+  top: 20px;
   right: 10px;
 }
-.form-container .form-register .form .mail-icon {
+.form-container .form form .mail-icon {
   position: absolute;
-  top: 86px;
+  top: 90px;
   right: 10px;
 }
-.form-container .form-register .form .eye-icon {
+.form-container .form form .eye-icon {
   position: absolute;
-  top: 156px;
+  top: 160px;
   right: 10px;
 }
-.form-container .form-register .form .eyeon-icon {
+.form-container .form form .eyeon-icon {
   position: absolute;
-  top: 156px;
+  top: 160px;
   right: 10px;
   display: none;
 }
 
-.form-container .form-register .form .terms {
+.form-container .form .terms {
   font-size: 12px;
   display: flex;
   justify-content: start;
@@ -182,7 +191,7 @@ header {
   width: 400px;
 }
 
-.form-container .form-register .form .terms input {
+.form-container .form .terms input {
   margin-right: -180px;
   margin-left: -190px;
 }
@@ -220,7 +229,7 @@ header {
 }
 .form-container .form .another-sing .flex-line .line {
   content: "";
-  width: 120px;
+  width: 80px;
   height: 1px;
   background-color: #c7c7c7;
   display: flex;
@@ -239,7 +248,7 @@ header {
   transition: 0.2s ease-in;
 }
 .form-container .form .another-sing .icon-flex img {
-  padding: 16px 44px;
+  padding: 8px 34px;
 }
 
 .form-container .form .another-sing .icon-flex .icon:hover {
