@@ -10,10 +10,6 @@ header {
   margin: 0 auto;
 }
 
-ul {
-  list-style: none;
-}
-
 .flex-container {
   margin: 0 auto;
   padding: 48px 100px;
@@ -23,6 +19,7 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+
 .flex-container .flex-nav .flex-list {
   display: flex;
   gap: 54px;
@@ -30,21 +27,28 @@ ul {
   font-weight: 500;
 }
 
-.flex-container .flex-nav .flex-list li {
-  transition: 0.2s ease-in;
-  cursor: pointer;
-  text-decoration: none;
-}
-.flex-container .flex-nav .flex-list li a {
-  text-decoration: none;
+.flex-container a {
   color: #4f555a;
+  text-decoration: none;
+  position: relative;
 }
-
-.flex-container .flex-nav .flex-list li a:hover {
+.flex-container a::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #4461f2;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.flex-container a:hover {
   color: #4461f2;
-  content: "";
-
-  height: 2px;
+}
+.flex-container a:hover::after {
+  transform: scaleX(1);
 }
 
 .container {
@@ -90,6 +94,10 @@ ul {
   grid-template-columns: 1;
   gap: 16px;
 }
+.form-container .form-login.none {
+  display: none;
+}
+
 .form-container .form-register .form {
   display: grid;
   grid-template-columns: 1;
