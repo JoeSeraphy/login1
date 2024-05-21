@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +16,23 @@
   </head>
   <body>
     <header>
+      <div class="menu-hamb" id="menu">
+        <div class="menu-bar" id="menu-bar" onclick="menuOnClick()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <nav class="nav" id="nav">
+          <div class="nav-list">
+            <a href="#">Inicio</a>
+            <a href="#">Sobre</a>
+            <a href="#">Blog</a>
+            <a href="#">Paginas</a>
+            <a href="#">Contatos</a>
+          </div>
+        </nav>
+      </div>
+      <div class="menu-bg" id="menu-bg"></div>
       <div class="flex-container">
         <nav class="flex-nav">
           <div class="flex-list">
@@ -26,7 +44,7 @@
           </div>
           <div class="flex-list">
             <a href="#" id="login">Entrar</a>
-            <a href="#" id="register">Registrar-se</a>
+            <a href="#" class="register">Registrar-se</a>
           </div>
         </nav>
       </div>
@@ -36,7 +54,7 @@
         <h2 class="title">Faça login para recarregar diretamente</h2>
         <p class="description">
           se você não tem uma conta, você pode se
-          <a href="#">registrar aqui!</a>
+          <a href="#" calss="register">registrar aqui!</a>
         </p>
       </div>
       <div class="avatar"><img src="image/Picture.png" alt="picture" /></div>
@@ -84,7 +102,7 @@
               name="mail"
               class="mail-icon"
             ></ion-icon>
-            <input type="password" placeholder="Crie uma enha" /><ion-icon
+            <input type="password" placeholder="Crie uma senha" /><ion-icon
               name="eye-off"
               class="eye-icon"
             ></ion-icon

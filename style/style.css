@@ -10,9 +10,13 @@ header {
   margin: 0 auto;
 }
 
+.menu-hamb {
+  display: none;
+}
+
 .flex-container {
   margin: 0 auto;
-  padding: 48px 100px;
+  padding: 48px 62px;
 }
 
 .flex-container .flex-nav {
@@ -57,15 +61,13 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 100px;
+  align-items: stretch;
+  padding: 0 62px;
   margin-top: 100px;
-  position: relative;
 }
 
 .container .text {
-  display: grid;
-  gap: 75px;
+  width: 400px;
 }
 
 .container .text .title {
@@ -74,39 +76,39 @@ header {
 }
 .container .text .description {
   font-size: 23px;
-  width: 300px;
+  width: 400px;
+  margin-top: 32px;
 }
 
 .container .text .description a {
   color: #4461f2;
   text-decoration: none;
 }
-.avatar img {
+.container .avatar img {
   display: flex;
   justify-content: center;
   align-self: center;
   padding: 0 36px;
-}
-.form-container {
   position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 4px;
-  transition: 0.3s ease;
+  width: 440px;
 }
-.form-container .form form {
+.container .form-container {
   display: grid;
-  grid-template-columns: 1;
-  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 400px;
 }
-.form-container.active .form.login {
-  transition: 0.3s ease-in-out;
+
+.container .form-container.active .form.login {
   transform: translateX(-400px);
   display: none;
 }
-.form-container.active .form.register {
-  transition: 0.3s ease-in-out;
+.container .form-container.active .form.register {
   display: block;
+
+  position: relative;
+  width: 100%;
 }
 
 .form-container .form.register {
@@ -114,15 +116,18 @@ header {
   display: none;
 }
 
-.form-container .form input {
-  width: 400px;
+.form-container .form.login input,
+.form-container .form.register input {
+  width: 100%;
   outline: none;
   padding: 16px 20px;
   border: none;
   border-radius: 10px;
   background-color: #eaf0f7;
   font-size: 18px;
+  margin-top: 16px;
 }
+
 .form-container .form input::placeholder {
   font-size: 18px;
   letter-spacing: 4px;
@@ -144,41 +149,41 @@ header {
 
 .form-container .form.login .mail-icon {
   position: absolute;
-  top: 20px;
+  top: 32px;
   right: 10px;
   cursor: pointer;
 }
 .form-container .form.login .eye-icon {
   position: absolute;
-  top: 90px;
+  top: 102px;
   right: 10px;
   cursor: pointer;
 }
 
 .form-container .form.login .eyeon-icon {
   position: absolute;
-  top: 90px;
+  top: 102px;
   right: 10px;
   display: none;
 }
-.form-container .form form .person-icon {
+.form-container .form.register .person-icon {
   position: absolute;
-  top: 20px;
+  top: 32px;
   right: 10px;
 }
-.form-container .form form .mail-icon {
+.form-container .form.register .mail-icon {
   position: absolute;
-  top: 90px;
+  top: 102px;
   right: 10px;
 }
-.form-container .form form .eye-icon {
+.form-container .form.register .eye-icon {
   position: absolute;
-  top: 160px;
+  top: 172px;
   right: 10px;
 }
 .form-container .form form .eyeon-icon {
   position: absolute;
-  top: 160px;
+  top: 172px;
   right: 10px;
   display: none;
 }
@@ -187,26 +192,27 @@ header {
   font-size: 12px;
   display: flex;
   justify-content: start;
-  align-items: center;
-  width: 400px;
+  align-items: first baseline;
 }
 
 .form-container .form .terms input {
-  margin-right: -180px;
-  margin-left: -190px;
+  margin-left: -184px;
+  margin-right: -184px;
 }
 
 .form-container .form span {
   font-size: 14px;
   font-size: 500;
   color: #c7c7c7;
-  text-align: end;
 }
 
 .form-container .form .btn {
   background-color: #4461f2;
   border-radius: 10px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-size: 19px;
   font-weight: 700;
@@ -214,6 +220,7 @@ header {
   padding: 16px 0;
   cursor: pointer;
   margin-top: 32px;
+  width: 400px;
 }
 
 .form-container .form .another-sing {
